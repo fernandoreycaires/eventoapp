@@ -33,6 +33,17 @@
                 <button type="submit" class="waves-effect waves-light btn"><i class="material-icons left">add_circle_outline</i> Adicionar</button>
             </form>
         </div>
+        <h5>Lista de Convidados</h5>
+        <div class="container" th:each="convidado:${convidados}">
+            <div class="row">
+                <div class="input-field col s6">
+                    <p><span th:text="${convidado.nomeconvidado}"></span> </p>
+                </div>
+                <div class="input-field col s6">
+                    <p><span th:text="${convidado.rg}"></span> </p>
+                </div>
+            </div>
+        </div>
 
         <!--JavaScript at end of body for optimized loading-->
         <script type="text/javascript" src="materialize/materialize/js/materialize.min.js"></script>
